@@ -61,13 +61,13 @@
 								<div class="d-flex w-100 mb-4">
     								<div class="form-group">
 										<div class="form-check " style="margin-right: 40px">
-										    <input class="form-check-input" name="male" type="checkbox" value="male">
+										    <input class="form-check-input" name="gender" type="radio" value="male">
 										    <label class="form-check-label text-white text-capitalize" >male</label>
 										</div>
 								    </div>
 								    <div class="form-group">
 										<div class="form-check">
-										    <input class="form-check-input" name="female" type="checkbox" value="female">
+										    <input class="form-check-input" name="gender" type="radio" value="female">
 										    <label class="form-check-label text-white text-capitalize" >female</label>
 										</div>
 								    </div>

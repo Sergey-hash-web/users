@@ -26,11 +26,10 @@ else if($get = 'add_filter'){
 	
 	$min_age = $_POST['min_age'];
 	$max_age = $_POST['max_age'];
-	$male = @$_POST['male'];
-	$female = @$_POST['female'];
+	$male = @$_POST['gender'];
 	$min_wallet = $_POST['min_wallet'];
 	$max_wallet = $_POST['max_wallet'];
-	if (empty($min_age) && empty($max_age) && empty($male) && empty($female) && empty($min_age) && empty($max_wallet)) {
+	if (empty($min_age) && empty($max_age) && empty($male)  && empty($min_age) && empty($max_wallet)) {
 		$_SESSION['error'] = "not selected filter users";
 		header("location: index.php");
 		die;
@@ -46,13 +45,7 @@ else if($get = 'add_filter'){
 		}
 	}
 	if (!empty($male)) {
-		if (!empty($female)) {
-			$filtr .= ",_gender_".$male."_".$female."_";
-		}else{
-			$filtr .= ",_gender_".$male."_";
-		}
-	}else if(!empty($female)){
-		$filtr .= ",_gender_".$female."_";
+		$filtr .= ",_gender_".$male."_";
 	}
 
 	if (!empty($min_wallet) || !empty($max_wallet)) {
